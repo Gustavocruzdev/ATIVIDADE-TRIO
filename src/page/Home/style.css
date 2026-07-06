@@ -1,0 +1,25 @@
+.home-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.card:hover {
+  background-color: #2980b9;
+}
