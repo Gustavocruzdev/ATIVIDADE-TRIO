@@ -11,5 +11,5 @@ import com.example.leaibackend.model.AlunoModel;
 public interface AlunoRepository extends JpaRepository<AlunoModel, Long>{
     Optional<AlunoModel>findByMatricula(String matricula);
 
-    boolean exexistsByMatricula(String matricula);
+    boolean existsByMatricula(String matricula);
 }

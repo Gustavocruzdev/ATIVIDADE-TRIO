@@ -20,7 +20,7 @@ public class AlunoService {
 
     @Transactional
     public AlunoResponseDTO cadastrar(AlunoRequestDTO dto){
-        if (alunoRepository.exexistsByMatricula(dto.matricula())) {
+        if (alunoRepository.existsByMatricula(dto.matricula())) {
           throw new BusinessException("Já existe um aluno cadastrado com esta matrícula.");  
         }
 
