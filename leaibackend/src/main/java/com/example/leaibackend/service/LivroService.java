@@ -20,7 +20,7 @@ public class LivroService {
 
     @Transactional
     public LivroResponseDTO cadastrar(LivroRequestDTO dto){
-        if (livroRepository.exexistsByIsbn(dto.isbn())) {
+        if (livroRepository.existsByIsbn(dto.isbn())) {
             throw new BusinessException("Já existe um livro cadastrado com este ISBN.");
         }
 
