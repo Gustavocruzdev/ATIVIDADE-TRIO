@@ -11,24 +11,30 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "tab_bibliotecarios")
+@Table(name = "tab_livros")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BibliotecarioModel {
+public class LivroModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String nome;
+    private String titulo;
+
+    @Column(nullable = false)
+    private String autor;
 
     @Column(nullable = false, unique = true)
-    private String email;
+    private String isbn;
 
-    @Column(nullable = false)
-    private String senha;
+    private String genero;
 
-    @Column(nullable = false)
-    private String cargo = "ROLE_ADMIN";
+    @Column(name = "quantidade_estoque", nullable = false)
+    private Integer quantidadeEstoque;
+
+    //OBS:Com os "ArgsConstructor" do Lombok não é necessário fazer os Construtores, Getters e Setters. Mas por precaução...Retire os Args e faça os construtores e GETTERS E SETTERS"
+
+    
 }
